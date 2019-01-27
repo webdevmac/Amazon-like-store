@@ -1,6 +1,6 @@
 var inquirer = require("inquirer");
 var mysql = require("mysql");
-
+var p;
 var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
@@ -32,12 +32,12 @@ function start() {
                         }
                         return choiceArray;
                     },
-                    message: "What is the Item number of the item you would like to buy?"
+                    message: "Select the item you would like to purchase!"
                 },
                 {
                     name: "quantity",
                     type: "input",
-                    message: "How many of the items would you like to buy?"
+                    message: "How many of these items would you like to purchase?"
                 }
 
             ]).then(function (answer) {
@@ -108,3 +108,12 @@ connection.connect(function(err) {
     });
   });
 }
+
+
+
+
+
+
+
+
+ 
